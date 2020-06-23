@@ -9,4 +9,4 @@
 <h2 align="center">
 Müsterlösung der Übungen der Class "Laravel für Fortgeschrittene"
 </h2>
-Hey lieber Teilnehmer in diesem Repository findest du sämtlichen Code den ich in den Übungsvideos geschrieben habe. Bei Problemen oder Fragen erstelle doch einfach ein Issue.
+Hey lieber Teilnehmer, in diesem Repository findest du sämtlichen Code aus den Übungsvideos. Wenn du auf Probleme stößt oder Fragen hast, erstelle bitte ein Issue.
