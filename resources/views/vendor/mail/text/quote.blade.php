@@ -1,0 +1,1 @@
+{{$slot}} by {{$author}}
