@@ -56,7 +56,7 @@ class Welcome extends Notification
     public function toArray($notifiable)
     {
         return [
-            'message' => "Thank you for using our application."
+            'message' => 'Thank you for using our application.',
         ];
     }
 

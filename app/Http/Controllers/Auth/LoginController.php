@@ -56,7 +56,6 @@ class LoginController extends Controller
             return redirect('/login');
         }
 
-
         $oauthUser = $this->findOrCreateUser($oauthUser, $provider);
 
         Auth::login($oauthUser, true);
@@ -75,7 +74,7 @@ class LoginController extends Controller
         } else {
             $user = User::whereEmail($oauthUser->getEmail())->first();
 
-            if (!$user) {
+            if (! $user) {
                 $user = User::create([
                     'email' => $oauthUser->getEmail(),
                     'name' => $oauthUser->getName(),
