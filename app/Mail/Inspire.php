@@ -11,9 +11,9 @@ class Inspire extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     public $quote;
     public $author;
+
     /**
      * Create a new message instance.
      *

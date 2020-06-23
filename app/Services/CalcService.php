@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Services;
 
 use App\Exceptions\CalcException;
@@ -13,16 +12,17 @@ class CalcService
 
         return $x + $y;
     }
+
     public function toThePowerOf($x, $y)
     {
         $this->validate($x, $y);
+
         return $x ** $y;
     }
 
-
     private function validate($x, $y)
     {
-        if (!is_numeric($x) | !is_numeric($y)) {
+        if (! is_numeric($x) | ! is_numeric($y)) {
             throw new CalcException('invalid arguments - they have to be numeric');
         }
     }

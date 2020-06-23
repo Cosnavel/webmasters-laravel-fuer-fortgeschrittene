@@ -15,6 +15,7 @@ class ConfirmUpload implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public $email;
+
     /**
      * Create a new job instance.
      *

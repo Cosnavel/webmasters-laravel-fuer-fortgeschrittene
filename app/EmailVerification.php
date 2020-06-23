@@ -10,7 +10,7 @@ class EmailVerification extends Model
     protected $guarded = [];
 
     protected $dates = [
-        'expires_at'
+        'expires_at',
     ];
 
     public function user()

@@ -16,7 +16,7 @@ class Post extends Model
 
     public function toggleActivity()
     {
-        $this->active = !$this->active;
+        $this->active = ! $this->active;
         $this->save();
     }
 }

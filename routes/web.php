@@ -161,6 +161,5 @@ Route::post('product', function (Request $request) {
         })->get('https://de.openfoodfacts.org/api/v0/product/'.request()->barcode)->json();
     });
 
-
     return view('product-search', compact('response'));
 });

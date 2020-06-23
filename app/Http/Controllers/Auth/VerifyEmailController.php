@@ -16,9 +16,9 @@ class VerifyEmailController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'verification_code' => 'required|digits:6'
+            'verification_code' => 'required|digits:6',
         ]);
 
-        return $request->user()->validNotificationToken($request->verification_code) ? redirect()->route('home') :  back()->with(['error' =>'invalid code']);
+        return $request->user()->validNotificationToken($request->verification_code) ? redirect()->route('home') : back()->with(['error' =>'invalid code']);
     }
 }

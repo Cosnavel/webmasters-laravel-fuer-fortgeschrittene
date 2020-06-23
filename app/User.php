@@ -44,6 +44,7 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\SocialAuth');
     }
+
     public function emailVerification()
     {
         return $this->hasOne(EmailVerification::class);
@@ -58,15 +59,18 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
     }
+
     public function abilities()
     {
         return $this->roles->map->abilities->flatten()->pluck('name')->unique();
     }
+
     public function assignRole($role)
     {
         if (is_string($role)) {
             $role = Role::whereName($role)->firstOrFail();
         }
+
         return $this->roles()->syncWithoutDetaching($role);
     }
 }

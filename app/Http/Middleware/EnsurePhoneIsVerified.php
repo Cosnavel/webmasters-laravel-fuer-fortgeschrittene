@@ -17,8 +17,10 @@ class EnsurePhoneIsVerified
     {
         if (! $request->user()->hasVerifiedPhone()) {
             $request->user()->sendPhoneVerificationToken();
+
             return redirect()->route('verify/phone');
         }
+
         return $next($request);
     }
 }

@@ -21,7 +21,6 @@ class Quote extends Mailable
         //
     }
 
-
     /**
      * Build the message.
      *

@@ -13,6 +13,7 @@ class Role extends Model
     {
         return $this->belongsToMany(Ability::class)->withTimestamps();
     }
+
     public function assignAbility($ability)
     {
         return $this->abilities()->syncWithoutDetaching($ability);

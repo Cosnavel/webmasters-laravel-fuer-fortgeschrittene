@@ -16,16 +16,18 @@ class VerifyPhoneController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'verification_code' => 'required'
+            'verification_code' => 'required',
         ]);
 
         $twilio = new Client(env('TWILIO_SID'), env('TWILIO_TOKEN'));
-        $verification = $twilio->verify->v2->services(env('TWILIO_SERVICE_ID'))->verificationChecks->create($request->verification_code, array('to' => request()->user()->phone_number));
+        $verification = $twilio->verify->v2->services(env('TWILIO_SERVICE_ID'))->verificationChecks->create($request->verification_code, ['to' => request()->user()->phone_number]);
 
         if ($verification->valid) {
             $request->user()->markPhoneAsVerified();
+
             return redirect()->route('home');
         }
+
         return back()->with(['error' => 'invalid verification code']);
     }
 }

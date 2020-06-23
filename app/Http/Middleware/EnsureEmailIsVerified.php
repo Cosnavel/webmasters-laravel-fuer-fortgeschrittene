@@ -17,8 +17,10 @@ class EnsureEmailIsVerified
     {
         if (! $request->user()->hasVerifiedEmail()) {
             $request->user()->sendEmailVerificationToken();
+
             return redirect()->route('verify/email');
         }
+
         return $next($request);
     }
 }
