@@ -9,6 +9,4 @@
 <h2 align="center">
 Müsterlösung der Übungen der Class "Laravel für Fortgeschrittene"
 </h2>
-Entire Code I have written in the solution videos for my Class Laravel fuer Fortgeschrittene
-## About memorily
 Hey lieber Teilnehmer in diesem Repository findest du sämtlichen Code den ich in den Übungsvideos geschrieben habe. Bei Problemen oder Fragen erstelle doch einfach ein Issue.
